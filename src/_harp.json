@@ -1,0 +1,21 @@
+{
+  "globals": {
+    "title": "Atul Arvind | Odoo Expert",
+    "desc": "Atul Arvind is a passionate odoo expert + lead developer + analyst having 4+ years of experience, Working with Openerp/Odoo from v5 to v9 and so on..",
+    "page_title": "Hey! I am Atul Arvind",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "robots": "index,follow",
+    "news_list": [
+      {
+        "type": "fa-fa-bullhorn",
+        "desc": "Added discuss comment system.",
+        "link": "/posts/my-first-post"
+      },
+      {
+        "type": "fa-github",
+        "desc": "Created atularvind.github.io on github pages using harp static site generator.",
+        "link": "/posts/my-first-post"
+      }
+    ]
+  }
+}

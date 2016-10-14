@@ -1,0 +1,152 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(http-equiv='content-type', content='text/html;charset=UTF-8')
+    meta(name="description" content="#{ desc }")
+    meta(name="keywords" content="#{ keywords }")
+    meta(name="robots" content="#{ robots }")
+    meta(name='author', content='Atul Arvind')
+    meta(name='google-site-verification', content='FKpRZegd0WhGyFDiSn8IwGGywmAoSPtRjaM-xcY4CaA')
+    title= title
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/assets/dist/css/material-kit.css', rel='stylesheet')
+    link(href='/assets/dist/css/timeline.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Varela+Round', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.min.js')
+    script(src='/assets/dist/js/material.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
+    script(src='https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.min.js')
+
+  body.index-page
+    nav.navbar.navbar-info.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-info')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Atul Arvind
+        #example-navbar-info.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li(class={ active: type == 'home' })
+              a(href='/')
+                i.fa.fa-home
+                |                             Home
+            li(class={ active: type == 'profile' })
+              a(href='/profile')
+                i.fa.fa-suitcase
+                |                             Profile
+            //li(class={ active: type == "blogs"})(class={ active: type == "post"})
+            li(class={ active: type == "blog" || type == "post" })
+              a(href='/blog')
+                i.fa.fa-newspaper-o
+                |                             Blog
+            li(class={ active: type == 'contact' })
+              a(href='/contact')
+                i.fa.fa-comment-o
+                |                             Contact
+    #particles-js.page-header.header-filter.lazy(data-parallax='active', style='background-image: url("/assets/dist/img/atularvind_header.png"); transform: translate3d(0px, 0px, 0px);')
+      .container
+        .row
+          .col-md-12.text-center
+            h1.title=page_title
+            h4=page_desc
+    .main.main-raised
+      .container.section
+        if type=='post'
+          row
+            .col-md-10.col-md-offset-1
+              != yield
+        else
+          != yield
+      if type == 'post'
+        .row
+          p.text-info.text-center Posted on : #{date}
+      hr
+      .row
+        .col-md-12
+          #social-button-group.button-group.filters-button-group.text-center
+            a(href='https://twitter.com/atularvind', target='_blank', title='Atul Arvind Twitter')
+              button.btn.btn-social.btn-fill.btn-twitter
+                i.fa.fa-twitter
+                .ripple-container
+            a(href='https://facebook.com/atularvindmakwana', target='_blank', title='Atul Arvind Facebook')
+              button.btn.btn-social.btn-fill.btn-facebook
+                i.fa.fa-facebook  
+                .ripple-container
+            a(href='https://www.linkedin.com/in/atulmakwana', target='_blank', title='Atul Arvind Linkedin')
+              button.btn.btn-social.btn-fill.btn-linkedin
+                i.fa.fa-linkedin
+                .ripple-container
+            a(href='https://github.com/atularvind', target='_blank', title='Atul Arvind Github')
+              button.btn.btn-social.btn-fill.btn-github
+                i.fa.fa-github
+                .ripple-container
+            a(href='http://stackoverflow.com/users/1312904/atul-arvind', target='_blank', title='Atul Arvind Stackoverflow')
+              button.btn.btn-social.btn-fill.btn-stackoverflow
+                i.fa.fa-stack-overflow
+                .ripple-container
+            a(href='https://www.odoo.com/forum/help-1/user/41064', target='_blank', title='Atul Arvind Odoo')
+              button.btn.btn-social.btn-fill.btn-odoo
+                i.fa.fa-circle-o
+                .ripple-container
+      if type == 'post'
+        hr
+        .row
+          .col-md-8.col-md-offset-2
+            #disqus_thread
+        .row
+          .col-md-12(style="height:20px;")
+
+    footer.footer.footer-white.footer-big
+      .container
+        .content
+          .row
+            .col-md-4
+              h5 About me
+              p
+                | I am Atul Arvind Makwana, odoo expert + lead developer + analyst having 4+ years of experience, Working with Openerp/Odoo from v5 to v9 and still continue.
+              p
+                | See site listing on 
+                a(href='/sitemap', class='text-info') Site map
+            .col-md-4
+              h5 News
+              .social-feed
+                - news_list.forEach(function(news) {
+                .feed-line
+                  i.fa.fa-bullhorn
+                  p
+                    a(href=news.link, class=text-muted)= news.desc
+                - })
+            .col-md-4
+              h5 Contact me
+              h3.text-info(style='padding-top: 0px; margin-top: 0px;')
+                i.fa.fa-envelope-o
+                a.text-info(href='mailto://atul.surficle@gmail.com')
+                  span  hello@atularvind.com
+              h3.text-info(style='padding-top: 0px; margin-top: 0px;')
+                i.fa.fa-skype
+                a.text-info(href='skype://atul.mak') 
+                  span  atul.mak
+        hr
+        .copyright.pull-center
+          | Made with 
+          i.fa.fa-heart.text-rose
+          |  by Atul Arvind, © 
+          script.
+            document.write(new Date().getFullYear())
+          |  All Rights Reserved
+    script(src='/assets/dist/js/material-kit.js')
+    script(src='/assets/dist/js/custom.js')
+      
+

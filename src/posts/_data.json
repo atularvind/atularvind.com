@@ -1,0 +1,14 @@
+{
+	"my-first-post": {
+	    "title": "My first post | Atul Arvind",
+	    "page_title": "My first post",
+	    "page_desc": "First post for my atularvind.github.io page",
+	    "date": "11 October 2016",
+	    "desc": "This is the first post I am writting using the markdown",
+	    "keywords": "atul, atularvind, first post, markdown, harp, bootstrap, jquery",
+	    "robots": "index,follow",
+	    "img": "https://d.pr/1d91A+",
+	    "categ": "Productivity",
+	    "type": "post"
+  }
+}

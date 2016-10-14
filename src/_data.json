@@ -1,0 +1,122 @@
+{
+  "index": {
+    "title": "Atul Arvind | Odoo Expert",
+    "page_title": "Hi, I am Atul",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Atul Arvind is a passionate odoo expert + lead developer + analyst having 4+ years of experience, Working with Openerp/Odoo from v5 to v9 and so on..",
+    "keywords": "atul, atularvind, atul arvind, odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "home",
+    "robots": "index,follow"
+  },
+  "profile": {
+    "title": "Profile of Atul Arvind | Odoo Expert",
+    "page_title": "Profile of Atul Arvind",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Profile page of Atul Arvind who is an Odoo Expert + lead developer + analysit having 4+ years of stong experiance from India.",
+    "keywords": "atul, atularvind, atul profile, atularvind odoo profile, odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "profile",
+    "robots": "index,follow"
+  },
+  "contact": {
+    "title": "Contact Atul Arvind | Odoo Expert",
+    "page_title": "Contact Atul Arvind",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Contact page of Atul Arvind whis is an Odoo Expert + lead developer + analysit having 4+ years of stong experiance. Send him a message or contact him on other network",
+    "keywords": "atul, atularvind, contact atularvind odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "contact",
+    "robots": "index,follow"
+  },
+  "404": {
+    "title": "It's a 404 page on Atul Arvind's website",
+    "page_title": "It's 404!",
+    "page_desc": "The page/post you are looking for is either missing or you landed illogical",
+    "date": "2016-09-28",
+    "desc": "This is the 404 page of atul arvind indicates that someting is missing or you landed incorrectly.",
+    "keywords": "atul, atularvind, odoo, odoo expert, 404 page",
+    "type": "404",
+    "robots": "noindex,nofollow"
+  },
+  "blog": {
+    "title": "Blog of Atul Arvind | Odoo Expert",
+    "page_title": "Blogs of Atul Arvind",
+    "page_desc": "Some of the blog post from my mind",
+    "date": "2016-09-28",
+    "desc": "A List of blog for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
+    "keywords": "atul, atularvind, blog of atul arvind, best odoo blog, odoo expert, odoo trainer, odoo help, odoo tutorial, odoo training, odoo tips",
+    "type": "blog",
+    "robots": "index,follow",
+    "blog_list": [ 
+      {
+        "blog_title": "How to install Odoo in Ubuntu 16.04 LTS?",
+        "blog_desc": "Read how i created this blog using Harpjs",
+        "blog_image": "https://2.bp.blogspot.com/-nYvxTdYtduw/V_XlveUskFI/AAAAAAAAcVQ/d3FV1QIBG4ki9QtA159yRoa23e0ROsdTwCEw/s640/how_to_insall_odoo_atularvind.jpg", 
+        "blog_link": "/odoo-install-ubuntu-14-04-lts",
+        "category": "Odoo"
+      },
+      {
+        "blog_title": "My new site is live now.",
+        "blog_desc": "After lots of learning I have created my blog on github.io using harp static site generator.",
+        "blog_image": "http://images.fineartamerica.com/images-medium-large/pile-of-stones-on-beach-dhmig-photography.jpg", 
+        "blog_link": "/atul-arvinds-site-is-live",
+        "category": "Productivity"
+      }
+    ],
+    "sidepost_list": [
+      {
+        "title": "How to install Odoo in ubuntu 16.04",
+        "link": "http://www.odoo.yenthevg.com/installing-odoo-9-ubuntu-16-04",
+        "target": "_blank"
+      },
+      {
+        "title": "What is odoo?",
+        "link": "https://en.wikipedia.org/wiki/Odoo",
+        "target": "_blank"
+      }
+    ]
+  },
+  "sitemap": {
+    "title": "Sitemap of Atul Arvind | Odoo Expert",
+    "page_title": "Sitemap of Atul Arvind",
+    "page_desc": "Listing of all blog posts and pages",
+    "date": "2016-09-28",
+    "desc": "A sitemap page of atul arvind for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
+    "type": "sitemap",
+    "keywords": "atul, atularvind, sitemap of atul arvind, odoo pages, odoo posts, odoo help",
+    "robots": "index,follow",
+    "page_list": [
+      {
+        "title": "Home",
+        "link": "/"
+      },
+      {
+        "title": "Profile",
+        "link": "/profile"
+      },
+      {
+        "title": "Blog",
+        "link": "/blog"
+      },
+      {
+        "title": "Contact",
+        "link": "/contact"
+      },
+      {
+        "title": "Sitemap",
+        "link": "/sitemap"
+      }
+    ],
+    "post_list": [
+      {
+        "title": "How to install Odoo 10 in ubuntu 16.04 LTS?",
+        "link": "/blog"
+      },
+      {
+      "title": "My new site is live now.",
+      "link": "/atul-arvinds-site-is-live"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+.row
+  .col-md-8.col-md-offset-2.text-center
+    .button-group.filters-button-group
+      button.btn.btn-info.btn-round(data-filter='*')
+        i.material-icons developer_board
+        |  All
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Odoo')
+        i.material-icons panorama_fish_eye
+        |  Odoo
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Productivity')
+        i.material-icons trending_up
+        |  Productivity
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Garden')
+        i.material-icons local_florist
+        |  Garden
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Pics')
+        i.material-icons camera_alt
+        |  Pics
+        .ripple-container
+.section
+  #grid.row
+    for post,slug in public.posts._data
+      .col-md-4.element-item(class= post.categ)
+        .card.card-blog
+          .card-image
+            a(href= "/posts/#{ slug }")
+              img.img.lazy(data-original= post.img, alt= post.page_title)
+            .ripple-container
+          .content
+            h6.category.text-info
+              i.material-icons bookmark
+              span.caps= post.categ
+            h4.card-title
+              a(href= "/posts/#{ slug }")= post.page_title
+            p.card-description= post.desc
+            .footer.text-center
+              a(href= "/posts/#{ slug }")
+                button.btn.btn-info.btn-round
+                  i.material-icons lightbulb_outline
+                  |  Read Story
+                  .ripple-container
