@@ -12,15 +12,13 @@ var $grid=$("#grid");$grid.imagesLoaded(function(){$grid.isotope({itemSelector:"
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-39281104-3', 'auto');
+ga('create', 'UA-39281104-2', 'auto');
 ga('send', 'pageview');
 
 
 var disqus_config = function () {
 this.page.url = $(location).attr('href');
 };
-
-console.log($(location).attr('href'));
 
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
