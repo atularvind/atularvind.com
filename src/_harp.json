@@ -7,6 +7,11 @@
     "robots": "index,follow",
     "news_list": [
       {
+        "type": "fa-github",
+        "desc": "Added page to install odoo 10 in ubuntu 16.04 LTS",
+        "link": "/pages/install-odoo-10-ubuntu-16-04"
+      },
+      {
         "type": "fa-fa-bullhorn",
         "desc": "Added discuss comment system.",
         "link": "/posts/my-first-post"

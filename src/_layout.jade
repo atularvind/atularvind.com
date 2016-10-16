@@ -61,7 +61,7 @@ html(lang='en')
             h1.title=page_title
             h4=page_desc
     .main.main-raised
-      .container.section.content
+      .container.section.p_content
         if type == "page" || type == "post"
           row
             .col-md-10.col-md-offset-1
@@ -74,7 +74,7 @@ html(lang='en')
       hr
       .row.social
         .col-md-12
-          #social-button-group.button-group.filters-button-group.text-center
+          #social-button-group.button-group.filters-button-group.text-center(style="margin-bottom: 20px;")
             a(href='https://twitter.com/atularvind', target='_blank', title='Atul Arvind Twitter')
               button.btn.btn-social.btn-fill.btn-twitter
                 i.fa.fa-twitter
