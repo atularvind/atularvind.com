@@ -106,6 +106,10 @@
       {
         "title": "Sitemap",
         "link": "/sitemap"
+      },
+      {
+        "title": "How to install Odoo 10 in ubuntu 16.04 LTS?",
+        "link": "/pages/install-odoo-10-ubuntu-16-04"
       }
     ],
     "post_list": [

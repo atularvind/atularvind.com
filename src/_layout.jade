@@ -12,8 +12,9 @@ html(lang='en')
     meta(name='google-site-verification', content='FKpRZegd0WhGyFDiSn8IwGGywmAoSPtRjaM-xcY4CaA')
     title= title
     link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
-    link(href='/assets/dist/css/material-kit.css', rel='stylesheet')
+    link(href='/assets/dist/css/material.min.css', rel='stylesheet')
     link(href='/assets/dist/css/timeline.css', rel='stylesheet')
+    link(href='/assets/dist/css/pages.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Varela+Round', rel='stylesheet')
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
@@ -25,8 +26,7 @@ html(lang='en')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
     script(src='https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.min.js')
-
-  body.index-page
+  body.index-page&attributes(type == "page" ? {'data-spy':'scroll', 'data-target': '#scrollpage', 'data-offset': 20} : {})
     nav.navbar.navbar-info.navbar-fixed-top
       .container
         .navbar-header
@@ -61,8 +61,8 @@ html(lang='en')
             h1.title=page_title
             h4=page_desc
     .main.main-raised
-      .container.section
-        if type=='post'
+      .container.section.content
+        if type == "page" || type == "post"
           row
             .col-md-10.col-md-offset-1
               != yield
@@ -72,7 +72,7 @@ html(lang='en')
         .row
           p.text-info.text-center Posted on : #{date}
       hr
-      .row
+      .row.social
         .col-md-12
           #social-button-group.button-group.filters-button-group.text-center
             a(href='https://twitter.com/atularvind', target='_blank', title='Atul Arvind Twitter')
@@ -99,9 +99,9 @@ html(lang='en')
               button.btn.btn-social.btn-fill.btn-odoo
                 i.fa.fa-circle-o
                 .ripple-container
-      if type == 'post'
+      if type == 'post' || type =='page'
         hr
-        .row
+        .row.disqus
           .col-md-8.col-md-offset-2
             #disqus_thread
         .row
@@ -147,5 +147,12 @@ html(lang='en')
           |  All Rights Reserved
     script(src='/assets/dist/js/material-kit.js')
     script(src='/assets/dist/js/custom.js')
+    if type == 'post'
+        script(src='/assets/dist/js/discus.js')
+    if type =='page'
+        script(src='/assets/dist/js/discus.js')
+        script(src='/assets/dist/js/scroll.js')
+        
+        
       
 
