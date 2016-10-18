@@ -41,41 +41,13 @@
   },
   "blog": {
     "title": "Blog of Atul Arvind | Odoo Expert",
-    "page_title": "Blogs of Atul Arvind",
+    "page_title": "Blog of Atul Arvind",
     "page_desc": "Some of the blog post from my mind",
     "date": "2016-09-28",
     "desc": "A List of blog for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
     "keywords": "atul, atularvind, blog of atul arvind, best odoo blog, odoo expert, odoo trainer, odoo help, odoo tutorial, odoo training, odoo tips",
     "type": "blog",
-    "robots": "index,follow",
-    "blog_list": [ 
-      {
-        "blog_title": "How to install Odoo in Ubuntu 16.04 LTS?",
-        "blog_desc": "Read how i created this blog using Harpjs",
-        "blog_image": "https://2.bp.blogspot.com/-nYvxTdYtduw/V_XlveUskFI/AAAAAAAAcVQ/d3FV1QIBG4ki9QtA159yRoa23e0ROsdTwCEw/s640/how_to_insall_odoo_atularvind.jpg", 
-        "blog_link": "/odoo-install-ubuntu-14-04-lts",
-        "category": "Odoo"
-      },
-      {
-        "blog_title": "My new site is live now.",
-        "blog_desc": "After lots of learning I have created my blog on github.io using harp static site generator.",
-        "blog_image": "http://images.fineartamerica.com/images-medium-large/pile-of-stones-on-beach-dhmig-photography.jpg", 
-        "blog_link": "/atul-arvinds-site-is-live",
-        "category": "Productivity"
-      }
-    ],
-    "sidepost_list": [
-      {
-        "title": "How to install Odoo in ubuntu 16.04",
-        "link": "http://www.odoo.yenthevg.com/installing-odoo-9-ubuntu-16-04",
-        "target": "_blank"
-      },
-      {
-        "title": "What is odoo?",
-        "link": "https://en.wikipedia.org/wiki/Odoo",
-        "target": "_blank"
-      }
-    ]
+    "robots": "index,follow"
   },
   "sitemap": {
     "title": "Sitemap of Atul Arvind | Odoo Expert",
