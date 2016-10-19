@@ -4,7 +4,7 @@
   "description": "A Website for atularvind.github.io",
   "main": "server.js",
   "scripts": {
-    "build": "npm run data && npm run compile",
+    "build": "npm run compile",
     "clean": "rm -rf ./dist/",
     "compile": "harp compile src dist",
     "data": "coffee data.coffee",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "gh-pages": "^0.2.0",
+    "lightsaber": "^0.6.8"
   },
   "engines": {
     "node": "~6.8.0",
