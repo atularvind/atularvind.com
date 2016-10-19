@@ -1,0 +1,32 @@
+pre
+  {
+    font-size: 17px;
+     overflow-x: hidden;
+     white-space: pre-wrap;
+     white-space: -moz-pre-wrap;  
+     white-space: -pre-wrap;      
+     white-space: -o-pre-wrap;    
+     word-wrap: break-word;       
+  }
+  section{
+    padding: 70px 0 50px 0;
+  }
+  section p{
+    font-size: 18px;
+  }
+  .affix-top {
+      position: relative;
+    }
+
+    .affix {
+      top: 100px;
+    }
+
+    .affix, 
+    .affix-bottom {
+        width: 213px;
+    }
+
+    .affix-bottom {
+      position: absolute;
+    }

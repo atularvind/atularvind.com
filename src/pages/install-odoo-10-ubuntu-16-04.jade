@@ -1,0 +1,208 @@
+.row
+  #scrollpage.col-md-3.scrollspy
+    ul#nav.nav.nav-pills.nav-pills-success.nav-stacked.hidden-xs.hidden-sm(data-spy='affix')
+      li.active
+        a(href='#prepare-ubuntu-for-odoo10') Prepare Ubuntu
+      li
+        a(href='#add-system-user-for-odoo-10') Add System user
+      li
+        a(href='#install-postgres-for-odoo-10') Install Postgres
+      li
+        a(href='#install-require-packages-for-odoo-10') Install Required Packages
+      li
+        a(href='#install-wkhtmltopdf-for-odoo-10') Install wkhtmltopdf
+      li
+        a(href='#get-odoo-10-source') Get Odoo Source
+      li
+        a(href='#configure-odoo-10') Configure Odoo
+      li
+        a(href='#place-init-script-odoo-10') Place init script
+      li
+        a(href='#test-odoo-10-server') Test Odoo Server
+      li
+        a(href='#automize-odoo-10') Automize Odoo server
+  #data.col-md-9
+    p(style='font-size: 18px')
+      strong Odoo 10
+      |  is released on 5th Oct 2016, this page will guide you to 
+      b install Odoo 10 in ubuntu 16.04 LTS
+      | .
+      |                         There can be many blogs and several ways to install the odoo, this page will help you to install odoo manually.
+    section#prepare-ubuntu-for-odoo10
+      h2.text-info Prepare Ubuntu
+      p
+        | Make sure you have sudo access or logged in as 
+        strong root
+        | . to log in as a root you need to run below command and provide the system password.
+      pre.alert.alert-info.
+        sudo su        
+      p
+        | We will update the ubuntu with the latest version of the packages and perform the function of the upgrade. below command will do that for you.
+      pre.alert.alert-info.
+        sudo apt-get update && sudo apt-get dist-upgrade        
+    hr
+    section#add-system-user-for-odoo-10
+      h2.text-info Add system user
+      p
+        | Now you need to create a system user to run the odoo server below command will add the user "odoo", creates the home path
+      pre.alert.alert-info.
+        sudo adduser --system --quiet --shell=/bin/bash --home=/opt/odoo --group odoo        
+      p The user should also be added to the sudo'ers group.
+      pre.alert.alert-info.
+        sudo adduser odoo sudo        
+    hr
+    section#install-postgres-for-odoo-10
+      h2.text-info Install & prepare postgres
+      p
+        | Odoo uses postgres as the database layer, below command will install postgres (version 9.5.4 is default in ubuntu 16.04)
+      pre.alert.alert-info.
+        apt-get update postgresql -y        
+      p after installing postgres check the version of the postgres using
+      pre.alert.alert-info.
+        psql --version        
+      p
+        | now depending on the version you need to install postgresql-server-dev, if your version is 9.5.3 then 9.5 and if 9.4.0 then 9.4, run the below command
+      pre.alert.alert-info.
+        sudo apt-get install postgresql-server-dev-9.5        
+      p
+        | After installing odoo we will create user "odoo" in postgres, for that you need to log in to postgres first using
+      pre.alert.alert-info.
+        su postgres        
+      p
+        | and after that create postgres user for odoo 10, it will prompt for the password of the new user.
+      pre.alert.alert-info.
+        createuser --createdb --username postgres --superuser --pwprompt odoo        
+    hr
+    section#install-require-packages-for-odoo-10
+      h2.text-info Install required packages
+      p
+        | In order to run the Odoo you need several packages & python libs installed in ubuntu.
+      pre.alert.alert-info.
+        sudo apt-get install wget git python-pip python-dev gdebi-core node-clean-css node-less python-gevent libevent-dev gcc libxml2-dev libxslt-dev libldap2-dev libssl-dev libsasl        
+      p
+        | Now we will install the python libs which is required by the odoo 10. for that we will fetch the requirement.txt file from the github odoo 10 branch raw source and install using the pip(python package management system). below command will do that for you.
+      pre.alert.alert-info.
+        cd /tmp && wget https://raw.githubusercontent.com/odoo/odoo/10.0/requirements.txt && sudo pip install -r requirements.txt        
+    hr
+    section#install-wkhtmltopdf-for-odoo-10
+      h2.text-info Install wkhtmltopdf
+      p
+        | wkhtmltopdf is required in odoo to print the reports. depending on your OS bit you can install wkhtmltopdf for odoo 10.
+      p How do I check if I have a 32-bit or a 64-bit OS?
+      pre.alert.alert-info.
+        uname -i         
+      p
+        b i386
+        |  or 
+        b i586
+        |  = OS is 32 bits
+        br
+        b x86_64
+        |  = OS is 64 bits
+      h4
+        strong For 64 bit architecture:
+      pre.alert.alert-info.
+        cd /tmp && wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb && sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb        
+      h4
+        strong For 32 bit architecture:
+      pre.alert.alert-info.
+        cd /tmp && wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-i386.deb && sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-i386.deb        
+    hr
+    section#get-odoo-10-source
+      h2.text-info Get Odoo 10 source
+      p
+        | Now we will fetch the odoo source using GitHub. or you can also get the nightly source(https://nightly.odoo.com/10.0/nightly/src/)
+        br
+        | below command will clone the git odoo 10 source code in /opt/odoo directory
+      pre.alert.alert-info.
+        sudo git clone --depth 1 --branch 10.0 https://www.github.com/odoo/odoo /opt/odoo/        
+      p After getting the source change the permission for the odoo source using
+      pre.alert.alert-info.
+        sudo chown -R odoo:odoo /opt/odoo/        
+    hr
+    section#configure-odoo-10
+      h2.text-info Configure Odoo 10
+      p
+        | Default configuration file for the odoo 10 will be under /opt/odoo/debian/openerp-server.conf, we will copy that file and put that under /etc/odoo/
+        br
+        |  below command will do that for you.
+      pre.alert.alert-info.
+        sudo mkdir /etc/odoo && cd /etc/odoo && sudo cp /opt/odoo/debian/odoo.conf /etc/odoo/odoo-server.conf        
+      p we will edit the odoo 10 configureation file using
+      pre.alert.alert-info.
+        nano /etc/odoo/odoo-server.conf        
+      p and change the parameters according to your system
+      pre.alert.alert-info.
+        [options]
+        ; This is the password that allows database operations:
+        admin_passwd = suerp@dmin
+        db_host = localhost
+        db_port = 5432
+        db_user = odoo
+        db_password = Postgr3s_odoo_passw0rd
+        addons_path = /opt/odoo/addons
+      p For more info : See Odoo configuration parameters
+      p
+        | Now we will provide proper permission to the odoo 10 config file using below command
+      p
+        | sudo chown odoo: /etc/odoo/odoo-server.conf && sudo chmod 640 /etc/odoo/odoo-server.conf
+    hr
+    section#place-init-script-odoo-10
+      h2.text-info Place init script
+      p
+        | Init script is used to start and stop the odoo server with proper configuration. we will copy the init file place it in to /etc/init.d/ using
+      pre.alert.alert-info.
+        cp /opt/odoo/debian/init /etc/init.d/odoo-server        
+      p
+        | Now we will edit the file and change the DEMON path from the file to /opt/odoo/odoo-bin using
+      pre.alert.alert-info.
+        sudo nano /etc/init.d/odoo-server        
+      p and change the path of demon from
+      pre.alert.alert-info.
+        DAEMON=/usr/bin/odoo        
+      p to
+      pre.alert.alert-info.
+        DAEMON=/opt/odoo/odoo-bin        
+      p and will provide proper permission to the file using
+      pre.alert.alert-info.
+        sudo chmod 755 /etc/init.d/odoo-server && sudo chown root: /etc/init.d/odoo-server        
+      p We will create log file based on init file using below command
+      pre.alert.alert-info.
+        sudo mkdir /var/log/odoo && sudo touch odoo-server.log        
+      p and will provide proper permission to the odoo 10 server log file
+      pre.alert.alert-info.
+        sudo chown -R odoo:root /var/log/odoo        
+    hr
+    section#test-odoo-10-server
+      h2.text-info Test Odoo server
+      p now it's time to get the result of hardwork! to start the odoo 10 server type
+      pre.alert.alert-info.
+        sudo /etc/init.d/odoo-server start        
+      p and you can check the log using
+      pre.alert.alert-info.
+        sudo tail -f /var/log/odoo/odoo-server.log        
+      p press ctrl + c to exit
+      p
+        | and if the server is local type the 
+        b 127.0.0.1:8069
+        |  in the browser or your server's public_ip:8069
+      p for the first time you will see database manager to create your first database.
+      p Now stop the server using
+      pre.alert.alert-info.
+        sudo /etc/init.d/odoo-server stop        
+      p And check the log file again to make sure odoo has stopped properly.
+    hr
+    section#automize-odoo-10
+      h2.text-info Automize Odoo Service
+      p
+        | If everything working well we can do a entry of odoo-sever in update-rc.d which will automatically start & stops the odoo server along with ubuntu
+      pre.alert.alert-info.
+        sudo update-rc.d odoo-server defaults        
+      p reboot your server and check for the odoo service using ps -ax | grep odoo.
+      p
+        | you can also configure odoo with nginx or apache to make it work with your domain.
+    // </div>
+  .col-md-9.col-md-offset-3
+    h4 Give me a comment if you stuck at any point, I will be happy to help you & revert back to you as soon as possible.
+    h3 Hope this will help you.
+    

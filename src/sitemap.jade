@@ -1,0 +1,46 @@
+.row
+  .col-md-6
+    .card.card-contact.card-raised
+      .header.header-raised.header-info.text-center
+        h4.card-title Blog posts of Atul arvind
+      .content
+        .list-group
+          - post_list.forEach(function(sitemap) {
+          a.list-group-item(href=sitemap.link, title=sitemap.title)= sitemap.title
+          - })
+  .col-md-6
+    .card.card-contact.card-raised
+      .header.header-raised.header-info.text-center
+        h4.card-title Pages of Atul arvind
+      .content
+        .list-group
+          - page_list.forEach(function(sitemap) {
+          a.list-group-item(href=sitemap.link, title=sitemap.title)= sitemap.title
+          - })
+.row
+  .col-md-12
+    .button-group.filters-button-group.text-center
+      a(href='https://twitter.com/atularvind', target='_blank', title='Atul Arvind Twitter')
+        button.btn.btn-social.btn-fill.btn-twitter
+          i.fa.fa-twitter
+          .ripple-container
+      a(href='https://facebook.com/atularvindmakwana', target='_blank', title='Atul Arvind Facebook')
+        button.btn.btn-social.btn-fill.btn-facebook
+          i.fa.fa-facebook  
+          .ripple-container
+      a(href='https://www.linkedin.com/in/atulmakwana', target='_blank', title='Atul Arvind Linkedin')
+        button.btn.btn-social.btn-fill.btn-linkedin
+          i.fa.fa-linkedin
+          .ripple-container
+      a(href='https://github.com/atularvind', target='_blank', title='Atul Arvind Github')
+        button.btn.btn-social.btn-fill.btn-github
+          i.fa.fa-github
+          .ripple-container
+      a(href='http://stackoverflow.com/users/1312904/atul-arvind', target='_blank', title='Atul Arvind Stackoverflow')
+        button.btn.btn-social.btn-fill.btn-stackoverflow
+          i.fa.fa-stack-overflow
+          .ripple-container
+      a(href='https://www.odoo.com/forum/help-1/user/41064', target='_blank', title='Atul Arvind Odoo')
+        button.btn.btn-social.btn-fill.btn-odoo
+          i.fa.fa-circle-o
+          .ripple-container

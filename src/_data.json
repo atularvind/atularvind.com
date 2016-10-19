@@ -1,0 +1,98 @@
+{
+  "index": {
+    "title": "Atul Arvind | Odoo Expert",
+    "page_title": "Hi, I am Atul",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Atul Arvind is a passionate odoo expert + lead developer + analyst having 4+ years of experience, Working with Openerp/Odoo from v5 to v9 and so on..",
+    "keywords": "atul, atularvind, atul arvind, odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "home",
+    "robots": "index,follow"
+  },
+  "profile": {
+    "title": "Profile of Atul Arvind | Odoo Expert",
+    "page_title": "Profile of Atul Arvind",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Profile page of Atul Arvind who is an Odoo Expert + lead developer + analysit having 4+ years of stong experiance from India.",
+    "keywords": "atul, atularvind, atul profile, atularvind odoo profile, odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "profile",
+    "robots": "index,follow"
+  },
+  "contact": {
+    "title": "Contact Atul Arvind | Odoo Expert",
+    "page_title": "Contact Atul Arvind",
+    "page_desc": "I am a passioniate Odoo/OpenERP lead developer + expert",
+    "date": "2016-09-28",
+    "desc": "Contact page of Atul Arvind whis is an Odoo Expert + lead developer + analysit having 4+ years of stong experiance. Send him a message or contact him on other network",
+    "keywords": "atul, atularvind, contact atularvind odoo, odoo expert, odoo developer, odoo trainer, odoo help, odoo tutorial, odoo training",
+    "type": "contact",
+    "robots": "index,follow"
+  },
+  "404": {
+    "title": "It's a 404 page on Atul Arvind's website",
+    "page_title": "It's 404!",
+    "page_desc": "The page/post you are looking for is either missing or you landed illogical",
+    "date": "2016-09-28",
+    "desc": "This is the 404 page of atul arvind indicates that someting is missing or you landed incorrectly.",
+    "keywords": "atul, atularvind, odoo, odoo expert, 404 page",
+    "type": "404",
+    "robots": "noindex,nofollow"
+  },
+  "blog": {
+    "title": "Blog of Atul Arvind | Odoo Expert",
+    "page_title": "Blog of Atul Arvind",
+    "page_desc": "Some of the blog post from my mind",
+    "date": "2016-09-28",
+    "desc": "A List of blog for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
+    "keywords": "atul, atularvind, blog of atul arvind, best odoo blog, odoo expert, odoo trainer, odoo help, odoo tutorial, odoo training, odoo tips",
+    "type": "blog",
+    "robots": "index,follow"
+  },
+  "sitemap": {
+    "title": "Sitemap of Atul Arvind | Odoo Expert",
+    "page_title": "Sitemap of Atul Arvind",
+    "page_desc": "Listing of all blog posts and pages",
+    "date": "2016-09-28",
+    "desc": "A sitemap page of atul arvind for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
+    "type": "sitemap",
+    "keywords": "atul, atularvind, sitemap of atul arvind, odoo pages, odoo posts, odoo help",
+    "robots": "index,follow",
+    "page_list": [
+      {
+        "title": "Home",
+        "link": "/"
+      },
+      {
+        "title": "Profile",
+        "link": "/profile"
+      },
+      {
+        "title": "Blog",
+        "link": "/blog"
+      },
+      {
+        "title": "Contact",
+        "link": "/contact"
+      },
+      {
+        "title": "Sitemap",
+        "link": "/sitemap"
+      },
+      {
+        "title": "How to install Odoo 10 in ubuntu 16.04 LTS?",
+        "link": "/pages/install-odoo-10-ubuntu-16-04"
+      }
+    ],
+    "post_list": [
+      {
+        "title": "How to install Odoo 10 in ubuntu 16.04 LTS?",
+        "link": "/pages/install-odoo-10-ubuntu-16-04"
+      },
+      {
+      "title": "My new site is live now.",
+      "link": "/atul-arvinds-site-is-live"
+      }
+    ]
+  }
+}
