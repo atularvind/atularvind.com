@@ -22,7 +22,9 @@
     "url": "https://github.com/atularvind/atularvind.com.git"
   },
   "devDependencies": {
-    "gh-pages": "^0.2.0"
+    "gh-pages": "^0.2.0",
+    "harp": "^0.21.0",
+    "coffee-script": "^1.11.1"
   },
   "engines": {
     "node": "~0.10.38",
