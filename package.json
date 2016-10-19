@@ -1,6 +1,6 @@
 {
   "name": "atularvind.com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Website for atularvind.github.io",
   "main": "server.js",
   "scripts": {
@@ -23,8 +23,6 @@
   },
   "devDependencies": {
     "gh-pages": "^0.2.0",
-    "harp": "^0.21.0",
-    "coffee-script": "^1.11.1"
   },
   "engines": {
     "node": "~6.8.0",
